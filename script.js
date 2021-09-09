@@ -22,13 +22,13 @@ var elEncabezado = document.querySelector("header");
 
 var loPrincipal = document.querySelector("main");
 
-var lorenIpsum = ["párrafo","texto","escrito","pasaje","enunciado"];
+var lorenIpsum = ["Shakira","Dua Lipa","Soulfia","Ariana Grande","Denisse Rosenthal"];
 
 function setup() {
     noCanvas();
     createElement("h1", elSaludo).parent(elEncabezado).id("title");
-    createA("index.html", "index").parent("vinculos");
-    createA("page.html", "page").parent("vinculos");
+    createA("portada.html", "portada").parent("vinculos");
+    createA("página.html", "página").parent("vinculos");
     if (dondeEstas) {
         portada();
     } else {
@@ -37,13 +37,13 @@ function setup() {
 }
 
 function portada() {
-    createSpan("Estás en index.html").parent("title");
-    createElement('p','Y este es un '+random(lorenIpsum)+' en la portada.').parent(loPrincipal);
+    createSpan("Estás en portada").parent("title");
+    createElement('p','Mi cantante favorita es '+random(lorenIpsum)+' en todo el mundo.').parent(loPrincipal);
     select("a:nth-child(1)").style("font-weight", "bold").style("color", "#000000");
 }
 
 function pagina() {
-    createSpan("Estás en page.html").parent("title");
-    createElement('p','Y este es un '+random(lorenIpsum)+' en la página.').parent(loPrincipal);
+    createSpan("Estás en página").parent("title");
+    createElement('p','Mi cantante favorita es '+random(lorenIpsum)+' en todo el mundo.').parent(loPrincipal);
     select("a:nth-child(2)").style("font-weight", "bold").style("color", "#000000");
 }
